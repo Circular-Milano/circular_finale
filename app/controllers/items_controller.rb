@@ -59,36 +59,36 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new
+    #@item = Item.new
   end
 
   def create
-    item = Item.new(item_params)
-    item.user = current_user
-    item.save
-    redirect_to items_show_path
+    #item = Item.new(item_params)
+    #item.user = current_user
+    #item.save
+    #redirect_to items_show_path
   end
 
   def update
-    @item = Item.find(params[:id])
-    @item.update(item_params)
-    redirect_to pages_items_path
+    #@item = Item.find(params[:id])
+    #@item.update(item_params)
+    #redirect_to pages_items_path
   end
 
   def edit
-    @item = Item.find(params[:id])
+    #@item = Item.find(params[:id])
   end
 
   def destroy
-    @item = Item.find(params[:id])
-    @item.update(deleted: true)
-    redirect_to pages_items_path
+    #@item = Item.find(params[:id])
+    #@item.update(deleted: true)
+    #redirect_to pages_items_path
   end
 
   def show
-    @item = Item.find(params[:id])
-    @reviews = Review.all
-    @order = Order.new
+    #@item = Item.find(params[:id])
+    #@reviews = Review.all
+    #@order = Order.new
   end
 
   #private

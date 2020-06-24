@@ -16,9 +16,19 @@ Rails.application.routes.draw do
   get "/destroy_item", to: "items#destroy", as: "destroy_item"
   get "/show_item", to: "items#show", as: "show_item"
 
+  get "/create_order", to: "orders#create", as: "create_order"
+  get "/new_order", to: "orders#new", as: "new_order"
+  get "/update_order", to: "orders#update", as: "update_order"
+  get "/edit_order", to: "orders#edit", as: "edit_order"
+  get "/destroy_order", to: "orders#destroy", as: "destroy_order"
+  get "/show_order", to: "orders#show", as: "show_order"
 
-
-
+  get "/create_review", to: "reviews#create", as: "create_review"
+  get "/new_review", to: "reviews#new", as: "new_review"
+  get "/update_review", to: "reviews#update", as: "update_review"
+  get "/edit_review", to: "reviews#edit", as: "edit_review"
+  get "/destroy_review", to: "reviews#destroy", as: "destroy_review"
+  get "/show_review", to: "reviews#show", as: "show_review"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
