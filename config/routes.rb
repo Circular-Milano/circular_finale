@@ -9,29 +9,57 @@ Rails.application.routes.draw do
   get "/help", to: "pages#help", as: "help"
 
 
-  get "/create_item", to: "items#create", as: "create_item"
-  get "/new_item", to: "items#new", as: "new_item"
-  get "/update_item", to: "items#update", as: "update_item"
-  get "/edit_item", to: "items#edit", as: "edit_item"
-  get "/destroy_item", to: "items#destroy", as: "destroy_item"
-  get "/show_item", to: "items#show", as: "show_item"
 
 
-  get "/create_order", to: "orders#create", as: "create_order"
-  get "/new_order", to: "orders#new", as: "new_order"
-  get "/update_order", to: "orders#update", as: "update_order"
-  get "/edit_order", to: "orders#edit", as: "edit_order"
-  get "/destroy_order", to: "orders#destroy", as: "destroy_order"
-  get "/show_order", to: "orders#show", as: "show_order"
+
+  resources :items
+
+#        Prefix        Verb        URI Pattern           Controller#Action
+
+#        items         GET          /items                items#index
+#                      POST         /items                items#create
+
+#       new_item       GET          /items/new            items#new
+
+#       edit_item      GET          /items/:id/edit       items#edit
+
+#          item        GET          /items/:id            items#show
+
+#                      PATCH        /items/:id            items#update
+#                      PUT          /items/:id            items#update
+
+#                      DELETE       /items/:id            items#destroy
 
 
-  get "/create_review", to: "reviews#create", as: "create_review"
-  get "/new_review", to: "reviews#new", as: "new_review"
-  get "/update_review", to: "reviews#update", as: "update_review"
-  get "/edit_review", to: "reviews#edit", as: "edit_review"
-  get "/destroy_review", to: "reviews#destroy", as: "destroy_review"
-  get "/show_review", to: "reviews#show", as: "show_review"
 
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :orders do
+    resources :reviews, only: [ :new, :create ]
+  end
+
+#        Prefix        Verb        URI Pattern            Controller#Action
+
+#        orders        GET          /orders                orders#index
+#                      POST         /orders                orders#create
+
+#       new_orders     GET          /orders/new            orders#new
+
+#       edit_orders    GET          /orders/:id/edit       orders#edit
+
+#          order       GET          /orders/:id            orders#show
+
+#                      PATCH        /orders/:id            orders#update
+#                      PUT          /orders/:id            orders#update
+
+#                      DELETE       /orders/:id            orders#destroy
+
+
+#       Prefix          Verb        URI Pattern                     Controller#Action
+
+#   new_order_review    GET        /orders/:order_id/reviews/new      reviews#new
+#   order_reviews       POST       /orders/:order_id/reviews          reviews#create
+
+
+
+# For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
