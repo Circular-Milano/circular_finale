@@ -19,6 +19,7 @@ categories = [
   {
     names: ["Guitar", "Backpack", "Speakers", "Tennis Racket", "DJ Mixing Decks", "Macbook", "Pressure Washer"],
     descriptions: ["I need this for my event.", "I am travelling this weekend.", "I am playing in a concert"]
+  }
   {
     names: ["Shopping cart", "Golf clubs", "Picnic Tables"],
     descriptions: ["I urgently need this", "Brand new", "Running a business"]
@@ -59,7 +60,7 @@ Whirly.start(spinner: "dots", status: "Destroying all records", stop: Paint["Cir
     user = User.create(
       first_name: Faker::Name.male_first_name,
       last_name: Faker::Name.last_name,
-      email: "man#{n + 11}@circular.bz", 
+      email: "man#{n + 11}@circular.bz",
       password: "password",
       address: locations.sample,
       phone_number: Faker::PhoneNumber.cell_phone

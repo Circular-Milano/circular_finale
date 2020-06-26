@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
     def new
-#     @review = Review.new
+     @review = Review.new
 #     if (current_user.items.find_by id: params['item_id']).nil?
 #       # customer
 #       @review.reviewable = Item.find(params['item_id'])

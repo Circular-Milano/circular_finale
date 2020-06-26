@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
    def index
 #     real_parameters = params[:search]
-#     @items = Item.all
+     @items = Item.all
 #     @markers = []
 #     return if real_parameters.nil?
 
@@ -63,20 +63,23 @@ class ItemsController < ApplicationController
    end
 
    def create
-     item = Item.new #(item_params)
-     item.user = current_user
-     item.save
-     redirect_to show_item_path
+     @item = Item.new#(item_params)
+     @item.user = current_user
+     if @item.save
+        redirect_to show_item_path, notice: "The item was succesfully created"
+      else
+        render :new
+      end
   end
 
    def update
-     @item = Item.find #(params[:id])
-     @item.update #(item_params)
+   #  @item = Item.find(params[:id])
+    # @item.update #(item_params)
      redirect_to show_item_path
    end
 
    def edit
-     @item = Item.find #(params[:id])
+     #@item = Item.find(params[:id])
    end
 
    def destroy
@@ -86,9 +89,9 @@ class ItemsController < ApplicationController
    end
 
   def show
-#     @item = Item.find #(params[:id])
-     @reviews = Review.all
-     @order = Order.new
+  #  @item = Item.find(params[:id])
+ #    @reviews = Review.all
+  #   @order = Order.new
   end
 
 #   #private
