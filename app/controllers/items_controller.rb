@@ -100,7 +100,7 @@ class ItemsController < ApplicationController
 
   # GET /items/:id
   def show
-    #@item = Item.find(params[:id])
+    @item = Item.find(params[:id])
     #@reviews = Review.all
     #@order = Order.new
   end
