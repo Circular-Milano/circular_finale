@@ -19,11 +19,7 @@ categories = [
   {
     names: ["Guitar", "Backpack", "Speakers", "Tennis Racket", "DJ Mixing Decks", "Macbook", "Pressure Washer"],
     descriptions: ["I need this for my event.", "I am travelling this weekend.", "I am playing in a concert"]
-<<<<<<< HEAD
   },
-=======
-  }
->>>>>>> c1e866afcd9c1769d8d65ed5ccd14ab679835ad5
   {
     names: ["Shopping cart", "Golf clubs", "Picnic Tables"],
     descriptions: ["I urgently need this", "Brand new", "Running a business"]
