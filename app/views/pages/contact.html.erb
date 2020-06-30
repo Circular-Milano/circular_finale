@@ -1,0 +1,18 @@
+<h1>TEAM CIRCULAR</h1>
+<p>Find me in app/views/pages/contact.html.erb</p>
+
+
+<form action="/contact">
+  <input type="text" name="member" value="<%= params[:member] %>" placeholder="Who are you looking for?">
+  <input type="Submit">
+</form>
+
+
+<ol>
+  <% @members.each do |member| %>
+  <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+
+<%= link_to "Back to Circular", home_path %>

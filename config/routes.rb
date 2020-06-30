@@ -1,63 +1,78 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#homepage", as: "home"
-  get "/about", to: "pages#about_us", as: "about"
-  get "/index", to: "pages#index", as: "index"
-  get "/get_the_app", to: "pages#get_the_app", as: "get_the_app"
-  get "/how_it_works", to: "pages#how_it_works", as: "how_it_works"
-  get "/experience", to: "pages#experience", as: "experience"
-  get "/help", to: "pages#help", as: "help"
-
-
-
+  root to: "pages#homepage", as: :home
+  get "about", to: "pages#about_us", as: :about
+  get "index", to: "pages#index", as: :index
+  get "get_the_app", to: "pages#get_the_app", as: :get_the_app
+  get "how_it_works", to: "pages#how_it_works", as: :how_it_works
+  get "experience", to: "pages#experience", as: :experience
+  get "help", to: "pages#help", as: :help
+  get "contact", to: "pages#contact", as: :contact
 
 
   resources :items
 
-#        Prefix        Verb        URI Pattern           Controller#Action
+#  READ ONE ITEMS
+#  get "/items/:id", to: "items#show"
 
-#        items         GET          /items                items#index
-#                      POST         /items                items#create
+#  CREATE AN ITEM.
+#  1 step: l utente vuole vedere il form da riempire. 2 step: creare l item
 
-#       new_item       GET          /items/new            items#new
+#  get "/items/new", to: "items#new"  # -->  display the item form
+#  post "/items", to: "items#create"
 
-#       edit_item      GET          /items/:id/edit       items#edit
+#  UPDATE ALL ITEMS
+#  1 step: l utente vuole vedere il form da riempire. 2 step: update del database
 
-#          item        GET          /items/:id            items#show
+#  get "/items/:id/edit", to: "items#edit"
+#  patch "/items/:id", to: "items#update"
 
-#                      PATCH        /items/:id            items#update
-#                      PUT          /items/:id            items#update
-
-#                      DELETE       /items/:id            items#destroy
-
-
-
-
-  resources :orders do
-    resources :reviews, only: [ :new, :create ]
-  end
-
-#        Prefix        Verb        URI Pattern            Controller#Action
-
-#        orders        GET          /orders                orders#index
-#                      POST         /orders                orders#create
-
-#       new_orders     GET          /orders/new            orders#new
-
-#       edit_orders    GET          /orders/:id/edit       orders#edit
-
-#          order       GET          /orders/:id            orders#show
-
-#                      PATCH        /orders/:id            orders#update
-#                      PUT          /orders/:id            orders#update
-
-#                      DELETE       /orders/:id            orders#destroy
+#  DELETE A ITEMS
+#  delete "/items/:id", to: "items#destroy"
 
 
-#       Prefix          Verb        URI Pattern                     Controller#Action
 
-#   new_order_review    GET        /orders/:order_id/reviews/new      reviews#new
-#   order_reviews       POST       /orders/:order_id/reviews          reviews#create
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ # get "create_order", to: "orders#create", as: "create_order"
+ # get "new_order", to: "orders#new", as: "new_order"
+#  get "update_order", to: "orders#update", as: "update_order"
+#  get "edit_order", to: "orders#edit", as: "edit_order"
+#  get "destroy_order", to: "orders#destroy", as: "destroy_order"
+#  get "show_order", to: "orders#show", as: "show_order"
+
+ # get "create_review", to: "reviews#create", as: "create_review"
+ # get "new_review", to: "reviews#new", as: "new_review"
+#  get "update_review", to: "reviews#update", as: "update_review"
+#  get "edit_review", to: "reviews#edit", as: "edit_review"
+#  get "destroy_review", to: "reviews#destroy", as: "destroy_review"
+ # get "show_review", to: "reviews#show", as: "show_review"
 
 
 
