@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
   #skip_before_action :authenticate_user!, only: [:index, :show]
 
+
+
+# GET / items
    def index
 #     real_parameters = params[:search]
      @items = Item.all
@@ -58,10 +61,15 @@ class ItemsController < ApplicationController
 #     end
    end
 
+
+#  GET / items/new
    def new
      @item = Item.new
    end
 
+
+
+# POST / items
    def create
      @item = Item.new#(item_params)
      @item.user = current_user
@@ -72,22 +80,30 @@ class ItemsController < ApplicationController
       end
   end
 
+
+#  PATCH / PUT   / items/1
    def update
    #  @item = Item.find(params[:id])
     # @item.update #(item_params)
      redirect_to show_item_path
    end
 
+
+#  GET / items/1/edit
    def edit
      #@item = Item.find(params[:id])
    end
 
+
+#  DELETE / items/1
    def destroy
  #    @item = Item.find(params[:id])
  #    @item.update(deleted: true)
      redirect_to show_item_path
    end
 
+
+# GET / items/1
   def show
   #  @item = Item.find(params[:id])
  #    @reviews = Review.all
