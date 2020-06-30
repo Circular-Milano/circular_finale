@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   #skip_before_action :authenticate_user!, only: [:index, :show]
 
 
-    # GET /items
+# GET /items
    def index
     #real_parameters = params[:search]
     @items = Item.all
@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
     #elsif !@range_time.nil?
    #   @start_time = Date.parse(@range_time.chars.first(10).join)
    #   @end_time = Date.parse(@range_time.chars.last(10).join)
-    end
+  #  end
 
     #@size = real_parameters[:size] unless real_parameters[:size].nil? || real_parameters[:size] == ""
 
@@ -45,7 +45,7 @@ class ItemsController < ApplicationController
 
    # else
    #   @items = Item.all
-    end
+  #  end
 
   #  users = @items.map { |item| item.user }.uniq
   #  unless users.nil?
@@ -55,9 +55,9 @@ class ItemsController < ApplicationController
      #     lat: user.latitude,
      #     lng: user.longitude
           # infoWindow: render_to_string(partial: "info_window", locals: { user: user })
-        }
-      end
-    end
+  #      }
+#      end
+#    end
   end
 
 
