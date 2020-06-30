@@ -19,7 +19,11 @@ categories = [
   {
     names: ["Guitar", "Backpack", "Speakers", "Tennis Racket", "DJ Mixing Decks", "Macbook", "Pressure Washer"],
     descriptions: ["I need this for my event.", "I am travelling this weekend.", "I am playing in a concert"]
+<<<<<<< HEAD
   },
+=======
+  }
+>>>>>>> c1e866afcd9c1769d8d65ed5ccd14ab679835ad5
   {
     names: ["Shopping cart", "Golf clubs", "Picnic Tables"],
     descriptions: ["I urgently need this", "Brand new", "Running a business"]
@@ -55,7 +59,7 @@ categories = [
     user = User.create(
       first_name: Faker::Name.male_first_name,
       last_name: Faker::Name.last_name,
-      email: "man#{n + 11}@circular.bz", 
+      email: "man#{n + 11}@circular.bz",
       password: "password",
       address: locations.sample,
       phone_number: Faker::PhoneNumber.cell_phone
@@ -130,4 +134,12 @@ end
         review: creator_review
       )
     end
+<<<<<<< HEAD
   end
+=======
+
+    # Clear and print stop message specified before
+    Whirly.status = ""
+  end
+end
+>>>>>>> c1e866afcd9c1769d8d65ed5ccd14ab679835ad5

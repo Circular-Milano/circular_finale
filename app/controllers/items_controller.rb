@@ -1,9 +1,12 @@
 class ItemsController < ApplicationController
   #skip_before_action :authenticate_user!, only: [:index, :show]
 
+
+
+# GET / items
    def index
 #     real_parameters = params[:search]
-#     @items = Item.all
+     @items = Item.all
 #     @markers = []
 #     return if real_parameters.nil?
 
@@ -58,37 +61,53 @@ class ItemsController < ApplicationController
 #     end
    end
 
+
+#  GET / items/new
    def new
-#     @item = Item.new
+     @item = Item.new
    end
 
+
+
+# POST / items
    def create
-#     item = Item.new(item_params)
-#     item.user = current_user
-#     item.save
-#     redirect_to items_show_path
+     @item = Item.new#(item_params)
+     @item.user = current_user
+     if @item.save
+        redirect_to show_item_path, notice: "The item was succesfully created"
+      else
+        render :new
+      end
   end
 
+
+#  PATCH / PUT   / items/1
    def update
-#     @item = Item.find(params[:id])
-#     @item.update(item_params)
-#     redirect_to pages_items_path
+   #  @item = Item.find(params[:id])
+    # @item.update #(item_params)
+     redirect_to show_item_path
    end
 
+
+#  GET / items/1/edit
    def edit
-#     @item = Item.find(params[:id])
+     #@item = Item.find(params[:id])
    end
 
+
+#  DELETE / items/1
    def destroy
-#     @item = Item.find(params[:id])
-#     @item.update(deleted: true)
-#     redirect_to pages_items_path
+ #    @item = Item.find(params[:id])
+ #    @item.update(deleted: true)
+     redirect_to show_item_path
    end
 
+
+# GET / items/1
   def show
-#     @item = Item.find(params[:id])
-#     @reviews = Review.all
-#     @order = Order.new
+  #  @item = Item.find(params[:id])
+ #    @reviews = Review.all
+  #   @order = Order.new
   end
 
 #   #private
