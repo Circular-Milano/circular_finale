@@ -19,24 +19,20 @@ categories = [
   {
     names: ["Guitar", "Backpack", "Speakers", "Tennis Racket", "DJ Mixing Decks", "Macbook", "Pressure Washer"],
     descriptions: ["I need this for my event.", "I am travelling this weekend.", "I am playing in a concert"]
+  },
   {
     names: ["Shopping cart", "Golf clubs", "Picnic Tables"],
     descriptions: ["I urgently need this", "Brand new", "Running a business"]
   }
 ]
 
-
-Whirly.start(spinner: "dots", status: "Destroying all records", stop: Paint["Circular is ready to launch! 🎉", "#28b485"]) do
-  sleep 2
-
   # Destroy everything
-  Payment.destroy_all
   Review.destroy_all
   User.destroy_all
   Item.destroy_all
   Order.destroy_all
 
-  Whirly.status = "Creating new users"
+
   # Women
   20.times do |n|
     user = User.create(
@@ -71,7 +67,6 @@ Whirly.start(spinner: "dots", status: "Destroying all records", stop: Paint["Cir
     user.save
   end
 
-    Whirly.status = "Creating items with orders"
   categories.each do |task_category|
     item_category[:names].each do |name|
       item_creator = User.all.sample
@@ -85,11 +80,11 @@ Whirly.start(spinner: "dots", status: "Destroying all records", stop: Paint["Cir
         longitude: longitudes.sample
         # status is "pending" by default
       )
-
+  end
+end
 
 
   # Some items will be marked return to start
-  Whirly.status = "Creating reviews"
   Order.where(status: "in progress").sample(5).each do ||
     order.update!(status: "returned")
 
@@ -135,8 +130,4 @@ Whirly.start(spinner: "dots", status: "Destroying all records", stop: Paint["Cir
         review: creator_review
       )
     end
-
-    # Clear and print stop message specified before
-    Whirly.status = ""
   end
-end
