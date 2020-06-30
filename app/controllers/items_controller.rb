@@ -67,8 +67,8 @@ class ItemsController < ApplicationController
   end
 
 
-  #def top
-  #end
+  def top
+  end
 
 
   # POST /items
@@ -112,4 +112,4 @@ class ItemsController < ApplicationController
 end
 
 
-# saranno da mettere dentro nel permit :start_time, :end_time, :price, :photo
+# saranno da mettere dentro nel permit :rating :start_time, :end_time, :price, :photo

@@ -1,7 +1,9 @@
 <h1>ALL ITEMS</h1>
-<%= link_to "Create a new Items", new_item_path %>
+<%= link_to "Create a new Items", new_item_path %> <%= link_to "Back to Circular", home_path %>
+
 <% @items.each do |item| %>
-  <h5><%= link_to item.name, item_path(item) %></h5>
+  <h5><%= link_to item.name, item_path(item) %> <%= '⭐️' * item.rating %></h5>
   <p><%= item.description %></p>
   <p><%= item.category %></p>
 <% end %>
+

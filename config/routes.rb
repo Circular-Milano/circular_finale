@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   get "contact", to: "pages#contact", as: :contact
 
 
-  resources :items
+  resources :items do
+    collection do
+      get :top
+    end
+  end
 
   #resources :orders do
   #  collection do
