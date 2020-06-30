@@ -67,6 +67,9 @@ class ItemsController < ApplicationController
   end
 
 
+  def top
+  end
+
 
   # POST /items
   def create
@@ -87,12 +90,14 @@ class ItemsController < ApplicationController
     #@order = Order.new
   end
 
+# PATCH/PUT /items/:id
   def update
     @item = Item.find(params[:id])
     @item.update(item_params)
     redirect_to item_path(@item)
   end
 
+# DELETE /items/:id
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
@@ -107,4 +112,4 @@ class ItemsController < ApplicationController
 end
 
 
-# saranno da mettere dentro nel permit :start_time, :end_time, :price, :photo
+# saranno da mettere dentro nel permit :rating :start_time, :end_time, :price, :photo
