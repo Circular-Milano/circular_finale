@@ -12,6 +12,29 @@ Rails.application.routes.draw do
 
   resources :items
 
+  #resources :orders do
+  #  collection do
+  #    get :top
+  #  end
+ # end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #  READ ONE ITEMS
 #  get "/items/:id", to: "items#show"
 
