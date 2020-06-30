@@ -30,6 +30,8 @@ gem 'cloudinary', '~> 1.12.0'
 
 gem 'devise'
 
+gem 'faker', '~> 1.4', '>= 1.4.3'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

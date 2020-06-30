@@ -12,10 +12,6 @@ Rails.application.routes.draw do
 
   resources :items
 
-
-#  READ ALL ITEMS
-#  get "/items", to: "items#index"
-
 #  READ ONE ITEMS
 #  get "/items/:id", to: "items#show"
 
@@ -78,5 +74,7 @@ Rails.application.routes.draw do
 #  get "destroy_review", to: "reviews#destroy", as: "destroy_review"
  # get "show_review", to: "reviews#show", as: "show_review"
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+
+# For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
