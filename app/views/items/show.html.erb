@@ -1,2 +1,5 @@
 <h1><%= @item.name %></h1>
 <p><%= @item.description %></p>
+<%= link_to "Back to Circular Store", items_path %>
+<%= link_to "Edit", edit_item_path(@item) %>
+<%= link_to "Delete", item_path(@item), method: :delete, data: { confirm: "Are you sure? 😱"} %>

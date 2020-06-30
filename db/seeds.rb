@@ -12,5 +12,6 @@
   Item.create(
     name: Faker::Device.model_name,
     description: Faker::Company.catch_phrase,
+    user_id: [1, 2, 3].sample
   )
 end

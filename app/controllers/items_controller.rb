@@ -63,54 +63,48 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    #@item = Item.new
+    @item = Item.new
   end
 
 
 
   # POST /items
   def create
-    #item = Item.new(item_params)
-    #item.user = current_user
-    #item.save
-    #redirect_to items_show_path
-  end
-
-
-
-
-  def update
-    #@item = Item.find(params[:id])
-    #@item.update(item_params)
-    #redirect_to pages_items_path
+    item = Item.new(item_params)
+    item.user = current_user
+    item.save
+    redirect_to item_path(item)
   end
 
   def edit
-    #@item = Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
-
-
-  def destroy
-    #@item = Item.find(params[:id])
-    #@item.update(deleted: true)
-    #redirect_to pages_items_path
-  end
-
-
-  # GET /items/:id
+# GET /items/:id
   def show
     @item = Item.find(params[:id])
     #@reviews = Review.all
     #@order = Order.new
   end
 
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    redirect_to item_path(@item)
+  end
 
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to items_path
+  end
 
-  #private
+  private
 
-  #def item_params
-  #  params.require(:item).permit(:name, :description, :condition, :start_time, :end_time, :price, :photo)
-  #end
+  def item_params
+    params.require(:item).permit(:name, :description, :category)
+  end
 end
 
+
+# saranno da mettere dentro nel permit :start_time, :end_time, :price, :photo
