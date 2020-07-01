@@ -2,4 +2,8 @@
 <p>Find me in app/views/orders/show.html.erb</p>
 
 <h1><%= @order.message %></h1>
+
+<h1><%= @order.review %></h1>
+
+<%= link_to "Back to Circular Store", items_path %>
 <%= link_to "Add a new Review", new_order_review_path(@order) %>
