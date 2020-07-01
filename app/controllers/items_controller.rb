@@ -80,9 +80,9 @@ class ItemsController < ApplicationController
   # POST /items
   def create
     item = Item.new(item_params)
-    item.user = current_user
+    #item.user = current_user
     item.save
-    redirect_to item_path(item)
+    redirect_to items_path(item)
   end
 
   def edit
@@ -93,7 +93,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     #@reviews = Review.all
-    #@order = Order.new
+    @order = Order.new
   end
 
 # PATCH/PUT /items/:id

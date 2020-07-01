@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :orders
   #resources :orders do
   #  collection do
   #    get :top
