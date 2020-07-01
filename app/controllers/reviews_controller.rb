@@ -13,10 +13,11 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    #@review = Review.new(review_params)
+    @review = Review.new(review_params)
+    @review.order = @order
     #@review.user = current_user
-    #@review.save
-    #redirect_to order_path(params["review"]["id"])
+    @review.save
+    redirect_to order_path(@order)       #(params["review"]["id"])
   end
 
   private
@@ -25,10 +26,15 @@ class ReviewsController < ApplicationController
     @order = Order.find(params[:order_id])
   end
 
-  #def review_params
-    #params.require(:review).permit(:content, :rating, :reviewable_id, :reviewable_type)
-  #end
+  def review_params
+    params.require(:review).permit(:content, :rating)
+  end
 #
+
+
+#  forse lo aggiungo dopo dentro il permit :   :reviewable_id, :reviewable_type)
+
+
   #def update
   #end
 
