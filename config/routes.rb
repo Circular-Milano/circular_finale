@@ -16,16 +16,21 @@ Rails.application.routes.draw do
       get :top
     end
 
+    member do
+     get :category
+    end
+
     resources :orders do
       get :item_id, to: "orders#new"
     end
 
-    member do
-      get :category
-    end
   end
 
-  resources :orders
+  resources :orders do
+    resources :reviews, only: [:new, :create]
+  end
+
+
   #resources :orders do
   #  collection do
   #    get :top

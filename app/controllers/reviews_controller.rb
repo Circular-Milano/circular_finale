@@ -25,23 +25,23 @@ class ReviewsController < ApplicationController
     @order = Order.find(params[:order_id])
   end
 
-  def review_params
+  #def review_params
     #params.require(:review).permit(:content, :rating, :reviewable_id, :reviewable_type)
-  end
+  #end
+#
+  #def update
+  #end
 
-  def update
-  end
+ # def edit
+  #end
 
-  def edit
-  end
+  #def destroy
+  #end
 
-  def destroy
-  end
+ # def index
+  #end
 
-  def index
-  end
-
-  def show
-  end
+  #def show
+  #end
 end
 
