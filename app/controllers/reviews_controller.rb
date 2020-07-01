@@ -16,8 +16,11 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.order = @order
     #@review.user = current_user
-    @review.save
-    redirect_to order_path(@order)       #(params["review"]["id"])    #(@order)       #(params["review"]["id"])
+    if @review.save
+      redirect_to order_path(@order) #(params["review"]["id"])    #(@order)       #(params["review"]["id"])
+    else
+      render :new
+    end
   end
 
   private
