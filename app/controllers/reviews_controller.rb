@@ -44,11 +44,11 @@ class ReviewsController < ApplicationController
  # def edit
   #end
 
-  def destroy
-    @review = Review.find(params[:id])
-    @review.destroy
-    redirect_to order_path(@review.order)
-  end
+  #def destroy
+  #  @review = Review.find(params[:id])
+  #  @review.destroy
+  #  redirect_to order_path(@review.order)
+  #end
 
  # def index
   #end
