@@ -13,7 +13,8 @@
     name: Faker::Device.model_name,
     description: Faker::Company.catch_phrase,
     user_id: [1, 2, 3].sample,
-    rating: rand(1..5)
+    rating: rand(1..5),
+    category: Faker::Commerce.department
   )
 end
 

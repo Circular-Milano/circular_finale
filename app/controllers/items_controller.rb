@@ -68,8 +68,14 @@ class ItemsController < ApplicationController
 
 
   def top
+    @items = Item.where(rating: 5)
   end
 
+
+  def category
+    @item = Item.find(params[:id])
+    @category_name = @item.category
+   end
 
   # POST /items
   def create
