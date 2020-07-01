@@ -8,11 +8,16 @@ Rails.application.routes.draw do
   get "experience", to: "pages#experience", as: :experience
   get "help", to: "pages#help", as: :help
   get "contact", to: "pages#contact", as: :contact
+  get "order", to: "pages#order", as: :order
 
 
   resources :items do
     collection do
       get :top
+    end
+
+    resources :orders do
+      get :item_id, to: "orders#new"
     end
 
     member do
@@ -26,10 +31,6 @@ Rails.application.routes.draw do
   #    get :top
   #  end
  # end
-
-
-
-
 
 
 

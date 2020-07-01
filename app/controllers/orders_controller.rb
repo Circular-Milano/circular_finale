@@ -33,24 +33,32 @@ class OrdersController < ApplicationController
   # end
 
 # GET /orders/:id    FUNZIONA
+  #def show
+#    @order = Order.find(params[:id])
+    #@review = Review.new
+ # end
+
+# GET /orders/new
+  def new
+    @order = Order.new
+    @item = Item.find_by id: (params["item_id"])
+  end
+
+
+# GET /orders/:id    FUNZIONA
   def show
     @order = Order.find(params[:id])
     #@review = Review.new
   end
 
-# GET /orders/new
-  def new
-    @item = Item.find(params[:item_id])
-    @order = Order.new
-  end
 
   def create
-    @item = Item.find(params[:item_id])
+    @item = Item.find_by id: (params["item_id"])
     @order = Order.new(order_params)
- #   @reservation.user = current_user
- #   @reservation.mask_id = params[:mask_id]
+    @order.user = current_user
+    @order.item_id = params[:item_id]
     @order.save
-    redirect_to item_path(@item)
+    redirect_to items_path(@item)
   end
 
  # def update
@@ -73,8 +81,8 @@ class OrdersController < ApplicationController
 
   private
 
-  def reservation_params
-    params.require(:reservation).permit(:item, :user)
+  def order_params
+    params.require(:order).permit(:item, :user)
   end
 end
 

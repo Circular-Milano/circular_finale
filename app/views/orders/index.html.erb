@@ -1,5 +1,5 @@
 <h1>ALL ORDERS</h1>
-<%= link_to "Create a new Items", new_item_path %> <%= link_to "Back to Circular", home_path %>
+<%= link_to "Create a new Order", new_order_path %> <%= link_to "Back to Circular", home_path %>
 
 <% @orders.each do |order| %>
   <h5><%= link_to order.message, order_path(order) %></h5>

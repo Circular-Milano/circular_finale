@@ -20,6 +20,9 @@ class PagesController < ApplicationController
   def help
   end
 
+  def order
+  end
+
   def contact
     @members = ["massi", "peter", "fernando"]
 
