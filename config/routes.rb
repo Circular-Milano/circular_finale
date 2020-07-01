@@ -8,23 +8,36 @@ Rails.application.routes.draw do
   get "experience", to: "pages#experience", as: :experience
   get "help", to: "pages#help", as: :help
   get "contact", to: "pages#contact", as: :contact
+ # get "order", to: "pages#order", as: :order
 
 
   resources :items do
     collection do
       get :top
     end
+
+    member do
+     get :category
+    end
+
+    resources :orders do
+      get :item_id, to: "orders#new"
+    end
+
   end
+
+  resources :orders do
+    resources :reviews, only: [:new, :create]
+  end
+
+  #resources :reviews, only: [:destroy]
+
 
   #resources :orders do
   #  collection do
   #    get :top
   #  end
  # end
-
-
-
-
 
 
 

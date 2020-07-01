@@ -60,6 +60,12 @@ class ItemsController < ApplicationController
 #    end
   end
 
+# GET /items/:id
+  def show
+    @item = Item.find(params[:id])
+    #@reviews = Review.all
+    @order = Order.new
+  end
 
   # GET /items/new
   def new
@@ -68,27 +74,28 @@ class ItemsController < ApplicationController
 
 
   def top
+    @items = Item.where(rating: 5)
   end
 
 
+  def category
+    @item = Item.find(params[:id])
+    @category_name = @item.category
+   end
+
   # POST /items
   def create
-    item = Item.new(item_params)
-    item.user = current_user
-    item.save
-    redirect_to item_path(item)
+    @item = Item.new(item_params)
+    @item.user = current_user
+    @item.save
+    redirect_to items_path(@item)
   end
 
   def edit
     @item = Item.find(params[:id])
   end
 
-# GET /items/:id
-  def show
-    @item = Item.find(params[:id])
-    #@reviews = Review.all
-    #@order = Order.new
-  end
+
 
 # PATCH/PUT /items/:id
   def update
