@@ -1,6 +1,123 @@
-<h1>Welcome to Circular</h1>
-  <p id="home-description">Circular is the world’s largest online peer-to-peer rental marketplace, empowering its members to embrace the sharing economy and leave unnecessary purchases behind. Designed with both people and businesses in mind, anyone can post their items and spaces on Circular for people in their community to rent.  <br><br>
-    Give your stuff new life!<br><br>Stay safe,  Be Circular.</p>
+<div class="home-banner">
+  <h1>Circular</h1>
+  <p>
+  <span id="banner-typed-text"></span>
+
+  <title>Search Bar</title>
+  <style type="text/css">
+    #search {
+      width: 80%;
+      padding: 7px;
+      border-radius: 1px solid #1d8394;
+      font-family: Karla;
+      border-radius: 5px 5px 5px 5px;
+    }
+    #submit{
+      border-radius: 0px 5px 5px 0px;
+      padding: 8px;
+      background: #2F303A;
+      border: 1px solid #4B88FE;
+      color: white;
+      margin-left: -10px;
+      cursor: pointer;
+      width: 85px;
+      text-align: center
+    }
+    #submit: hover {
+      background: #346290;
+      transition: all 0,30s;
+      border: #4B88FE
+      ;
+    }
+  </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-push-2 col-md-push-2 col-sm-push-2">
+      <form method="post" action="#" style="padding-top: 100px;">
+        <input type="text" name="text" id="search" placeholder="Start Renting">
+        <input type="submit" name="submit" value="search" id="submit">
+
+      </form>
+      </div>
+    </div>
+  </div>
+
+  </nav>
+
+  </p>
+</div>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-push-2 col-md-push-2 col-sm-push-2>
+      <h1>How it Works</h1>
+      <hr>
+      <p>
+        Have something you want to share with the world? Renting with Buro is easy, flexible, secured and fast so borrow items you need and lend items you don’t.
+      </p>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div id="carousel" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="background-image: url(https://images.unsplash.com/photo-1516946870798-f970a32afc8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+        <h5> Discover Circular </h5>
+    </div>
+
+    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1577583123610-238683cc3f9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+        <h5> Discover Circular </h5>
+    </div>
+
+    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1555201441-7b166836415d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+        <h5> Discover Circular </h5>
+    </div>
+  </div>
+
+
+  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 50 %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <%= link_to "About Us", about_path %>
