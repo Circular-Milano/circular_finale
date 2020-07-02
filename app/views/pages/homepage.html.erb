@@ -2,7 +2,49 @@
   <h1>Circular</h1>
   <p>
   <span id="banner-typed-text"></span>
-</p>
+
+  <title>Search Bar</title>
+  <style type="text/css">
+    #search {
+      width: 80%;
+      padding: 7px;
+      border-radius: 1px solid #1d8394;
+      font-family: Karla;
+      border-radius: 5px 5px 5px 5px;
+    }
+    #submit{
+      border-radius: 0px 5px 5px 0px;
+      padding: 8px;
+      background: #2F303A;
+      border: 1px solid #4B88FE;
+      color: white;
+      margin-left: -10px;
+      cursor: pointer;
+      width: 85px;
+      text-align: center
+    }
+    #submit: hover {
+      background: #346290;
+      transition: all 0,30s;
+      border: #4B88FE
+      ;
+    }
+  </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-push-2 col-md-push-2 col-sm-push-2">
+      <form method="post" action="#" style="padding-top: 100px;">
+        <input type="text" name="text" id="search" placeholder="Search">
+        <input type="submit" name="submit" value="search" id="submit">
+
+      </form>
+      </div>
+    </div>
+  </div>
+
+  </nav>
+
+  </p>
 </div>
 
 <div class="container">
