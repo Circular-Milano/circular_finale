@@ -13,6 +13,10 @@
   </head>
 
   <body>
+    <body data-spy="scroll" data-target="#navbar-example">
+      <script>
+        $('body').scrollspy({ target: '#navbar-example' })
+      </script>
     <%= render "shared/navbar" %>
     <%= yield %>
     <%= render "shared/footer" %>

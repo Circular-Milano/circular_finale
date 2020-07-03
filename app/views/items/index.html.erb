@@ -2,18 +2,36 @@
 
 
 
-<div class="container">
-  <div class="row">
 
-  <% @items.each do |item| %>
-  <div class="col-sm-4">
-    <h5><%= link_to item.name, item_path(item) %> <%= '⭐️' * item.rating %></h5>
-    <p><%= item.description %></p>
-    <p><%= item.category %></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="row">
+
+    <% @items.each do |item| %>
+    <div class="col-sm-4">
+      <h5><%= link_to item.name, item_path(item) %> <%= '⭐️' * item.rating %></h5>
+      <p><%= item.description %></p>
+      <p><%= item.category %></p>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
-
 
 
 
