@@ -1,0 +1,67 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-circular">
+  <%= link_to "/", class: "navbar-brand" do %>
+    <%= image_tag "Logo.svg" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <!-- this stores the current relative url for highlighting the navbar buttons accordingly -->
+  <% current_url = request.fullpath %>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav nav-pills">
+        <li class="nav-item circular-nav-item">
+          <% if current_page?("/pages/home") || current_page?("/results") || current_page?("/pages") %>
+          <%= link_to "Watch Now", "/pages/home", class: "circular-nav-link circular-nav-item-active" %>
+          <% else %>
+          <%= link_to "Watch Now", "/pages/home", class: "circular-nav-link" %>
+          <% end %>
+        </li>
+        <li class="nav-item circular-nav-item">
+          <!-- the method below is currently working for highlighting the current view on the history navbar buttons -->
+          <% if current_url.include?("/history")%>
+          <%= link_to "History", "/history", class: "circular-nav-link circular-nav-item-active" %>
+          <% elsif  current_url.include?("/history/movie/#{Integer}")%>
+          <%= link_to "History", "/history", class: "circular-nav-link circular-nav-item-active" %>
+          <% else %>
+          <%= link_to "History", "/history", class: "circular-nav-link" %>
+          <% end %>
+        </li>
+        <li class="nav-item circular-nav-item">
+          <% if current_page?("/achievements") %>
+          <%= link_to "Achievements", "/achievements", class: "circular-nav-link circular-nav-item-active" %>
+          <% else %>
+          <%= link_to "Achievements", "/achievements", class: "circular-nav-link" %>
+          <% end %>
+        </li>
+        <!-- IMPORTANT: remember to insert the proper path below -->
+        <li class="nav-item circular-nav-item">
+          <% if current_page?("/saved") %>
+          <%= link_to "Saved", saved_movie_path, class: "circular-nav-link circular-nav-item-active" %>
+          <% else %>
+          <%= link_to "Saved", saved_movie_path, class: "circular-nav-link" %>
+          <% end %>
+        </li>
+        <li class=" circular-nav-item dropdown">
+          <% if current_url.include?("/profile") ||  current_url.include?("/users/edit")%>
+          <%= link_to "Profile", "/profile", class: "circular-nav-item-active dropdown-toggle  circular-nav-link", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "View Profile", "/profile", class: "dropdown-item circular-dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item circular-dropdown-item" %>
+          </div>
+          <% else %>
+          <%= link_to "Profile", "/profile", class: "circular-nav-link dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "View Profile", "/profile", class: "dropdown-item circular-dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item circular-dropdown-item" %>
+          <% end %>
+      <% else %>
+        <li class="nav-item circular-nav-item">
+          <%= link_to "Login", new_user_session_path, class: "circular-nav-link circular-nav-item" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
