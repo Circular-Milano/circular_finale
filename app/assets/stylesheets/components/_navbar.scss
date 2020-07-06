@@ -1,143 +1,184 @@
-.navbar-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: 30px 100px 100px auto 170px 50px 50px 50px;
-  grid-template-rows:  83px;
-  grid-template-areas:
-    "spc stores about logo search logout profile bag ";
-  justify-items: center;
-  align-items: center;
-    font-size: 14px;
-  line-height: 16px;
-  margin-top: 5px;
-  border-bottom: 1px solid #333333;
-}
-.navbar-box-str {
-  grid-area: stores;
-  height: 45px;
-  width: 100px;
-  color: white;
-  background-color: #94b0b9;
-  margin-right: 3px;
-  border-radius: 5px;
-  justify-self: center;
+.nav-bar {
   display: flex;
-  justify-content: center;
+  width: 100vw;
+  height: 80px;
+  background-color: black;
+  justify-content: space-between;
   align-items: center;
-}
-.navbar-box-abt {
-  grid-area: about;
-  color: white;
-  background-color: #d47f6c;
-  margin-left: 3px;
-  border-radius: 5px;
-  height: 45px;
-  width: 100px;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar-spc {
-  grid-area: spc;
-  height: 45px;
-  width:30px;
-  justify-self: center;
-}
-.nav-logo {
-  height: 45px;
-  width: 100%;
-  grid-area: logo;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-
-  p {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-
+  position: fixed;
+  z-index: 9999;
+  top: 0;
   a {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-  }
-
-  a:hover{
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
-  }
-}
-
-.navbar-box-srch {
-  grid-area: search;
-  height: 45px;
-  width: 170px;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // border-bottom: 1px solid black;
-}
-
-.navbar-box-lg{
-  grid-area: logout;
-  height: 45px;
-  width: 50px;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-      align-self: start;
-      margin-left: 10px;
-      margin-top: 10px;
-      width: 30px;
-      height: 30px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0 8px;
+    transition: 0.3s;
+    &:hover {
+      color: white;
+      transition: 0.3s;
     }
-    img:hover {
-    opacity: 0.8;
   }
 }
 
-.navbar-box-bag {
-  grid-area: bag;
-  height: 45px;
-  width: 50px;
-  justify-self: center;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-      img {
-      width: 30px;
-      height: 30px;
-    }
-    img:hover {
-    opacity: 0.8;
-  }
+.nav-bar-logo {
+  padding-left: 24px;
 }
 
-.navbar-box-profile {
-  grid-area: profile;
-  height: 45px;
-  width: 50px;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.nav-bar-links {
+  color: white;
+  text-align: right;
+  padding-right: 24px;
+}
 
-    img {
-      width: 30px;
-      height: 30px;
-    }
-        img:hover {
-    opacity: 0.8;
-  }
+#logo {
+  height: 24px;
+  width: auto;
 }
-.look-style {
-  font-family: karla;
-  font-size: 14px;
-  color: #333333;
-}
+
+// .navbar-container {
+//   position: relative;
+//   display: grid;
+//   grid-template-columns: 30px 100px 100px auto 170px 50px 50px 50px;
+//   grid-template-rows:  83px;
+//   grid-template-areas:
+//     "spc stores about logo search logout profile bag ";
+//   justify-items: center;
+//   align-items: center;
+//     font-size: 14px;
+//   line-height: 16px;
+//   margin-top: 5px;
+//   border-bottom: 1px solid #333333;
+// }
+// .navbar-box-str {
+//   grid-area: stores;
+//   height: 45px;
+//   width: 100px;
+//   color: white;
+//   background-color: #94b0b9;
+//   margin-right: 3px;
+//   border-radius: 5px;
+//   justify-self: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .navbar-box-abt {
+//   grid-area: about;
+//   color: white;
+//   background-color: #d47f6c;
+//   margin-left: 3px;
+//   border-radius: 5px;
+//   height: 45px;
+//   width: 100px;
+//   justify-self: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .navbar-spc {
+//   grid-area: spc;
+//   height: 45px;
+//   width:30px;
+//   justify-self: center;
+// }
+// .nav-logo {
+//   height: 45px;
+//   width: 100%;
+//   grid-area: logo;
+//   justify-self: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: end;
+
+//   p {
+//     font-size: 24px;
+//     font-weight: bold;
+//     margin-top: 10px;
+//   }
+
+//   a {
+//     font-size: 24px;
+//     font-weight: bold;
+//     color: black;
+//   }
+
+//   a:hover{
+//     text-decoration: none;
+//   }
+// }
+
+// .navbar-box-srch {
+//   grid-area: search;
+//   height: 45px;
+//   width: 170px;
+//   justify-self: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // border-bottom: 1px solid black;
+// }
+
+// .navbar-box-lg{
+//   grid-area: logout;
+//   height: 45px;
+//   width: 50px;
+//   justify-self: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   img {
+//       align-self: start;
+//       margin-left: 10px;
+//       margin-top: 10px;
+//       width: 30px;
+//       height: 30px;
+//     }
+//     img:hover {
+//     opacity: 0.8;
+//   }
+// }
+
+// .navbar-box-bag {
+//   grid-area: bag;
+//   height: 45px;
+//   width: 50px;
+//   justify-self: center;
+//   display: flex;
+//   justify-content: start;
+//   align-items: center;
+//       img {
+//       width: 30px;
+//       height: 30px;
+//     }
+//     img:hover {
+//     opacity: 0.8;
+//   }
+// }
+
+// .navbar-box-profile {
+//   grid-area: profile;
+//   height: 45px;
+//   width: 50px;
+//   justify-self: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//     img {
+//       width: 30px;
+//       height: 30px;
+//     }
+//         img:hover {
+//     opacity: 0.8;
+//   }
+// }
+// .look-style {
+//   font-family: karla;
+//   font-size: 14px;
+//   color: #333333;
+// }

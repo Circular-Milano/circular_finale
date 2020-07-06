@@ -1,7 +1,34 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// Graphical variables
+// @import "config/fonts";
+// @import "config/colors";
+// @import "config/bootstrap_variables";
 
+// External libraries
+// @import "bootstrap/scss/bootstrap";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+// @import 'mapbox-gl/dist/mapbox-gl';
+
+
+// Your CSS partials
+// @import "components/index";
+// @import "components/card";
+@import "components/navbar";
+// @import "components/avatar";
+// @import "components/container";
+// @import "components/button";
+// @import "components/tab";
+// @import "components/review";
+// @import "components/form";
+
+// Import general CSS
+// @import "pages";
+
+// Import Plugins
+// @import "flatpickr/dist/themes/dark";
 
 // @import "bootstrap/scss/bootstrap";
 // @import "bootstrap";
