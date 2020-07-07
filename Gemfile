@@ -36,6 +36,10 @@ gem 'devise'
 
 gem 'faker', '~> 1.4', '>= 1.4.3'
 
+gem 'geocoder'
+
+gem 'pg_search'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
