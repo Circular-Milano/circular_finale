@@ -1,14 +1,14 @@
 .nav-item-circular > a {
-  color: white !important;
-  background-color: transparent !important;
-  border-radius: 10px !important;
-  transition: background-color 0.3s ease !important;
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 .nav-item-circular:hover > a:hover {
     color: white !important;
-    background-color: #FD9F9F !important;
-    border-radius: 10px !important;
-    transition: background-color 0.3s ease !important;
+    background-color: #FD9F9F;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .navbar-light .navbar-nav .nav-link {
