@@ -3,32 +3,17 @@ Rails.application.routes.draw do
   root to: "pages#homepage", as: :home
   get "about", to: "pages#about_us", as: :about
   get "index", to: "pages#index", as: :index
-  get "get_the_app", to: "pages#get_the_app", as: :get_the_app
-  get "how_it_works", to: "pages#how_it_works", as: :how_it_works
-  get "experience", to: "pages#experience", as: :experience
   get "help", to: "pages#help", as: :help
   get "contact", to: "pages#contact", as: :contact
+  get "cdashboard", to: "pages#dashboard", as: :dashboard
  # get "order", to: "pages#order", as: :order
 
 
   resources :items do
-    collection do
-      get :top
-    end
-
-    member do
-     get :category
-    end
-
     resources :orders do
-      get :item_id, to: "orders#new"
     end
-
   end
 
-  resources :orders do
-    resources :reviews, only: [:new, :create]
-  end
 
   #resources :reviews, only: [:destroy]
 

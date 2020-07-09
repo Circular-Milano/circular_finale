@@ -5,21 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Order.destroy_all
+Item.destroy_all
+User.destroy_all
 
-
-
-100.times do
-  Item.create(
-    name: Faker::Device.model_name,
-    description: Faker::Company.catch_phrase,
-    user_id: [1, 2, 3].sample,
-    rating: rand(1..5),
-    category: Faker::Commerce.department
-  )
-end
-
-
-100.times do |i|
+10.times do |i|
   user = User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -30,21 +20,25 @@ end
   puts "#{i + 1}. #{user.first_name} #{user.last_name}"
 end
 
+10.times do
+  item = Item.create(
+    name:  Faker::Device.model_name,
+    description: Faker::Quote.yoda,
+    user_id: User.all.sample.id,
+    category: Faker::Commerce.department
+  )
+  puts item.valid?
+end
 
-  user_renter = User.all[11..20]
+  user_renter = User.all[1..5]
 
 # create a ORDERS seed
 # create two separate groups of user: one for owners, another for renters
 # user.find / user.where
 # is_active = ['true', 'false']
-def random_owner
-  Item.all.sample.id
-end
 
-all_items = Item.all
-all_items_uid = []
 # booked_item = Item.all.where("user_id: #{}")
-100.times do |i|
+10.times do |i|
   order = Order.create!(
     user_id: user_renter.sample.id,
     # mask_id: all_masks.include?(user_owner.mask_id),
@@ -57,7 +51,7 @@ all_items_uid = []
     # end,
     # mask_id: Mask.joins(:user).where({user: user_owner.sample}),
     # mask_id: user_owner.sample.masks.sample.id,
-    item_id: random_owner,
+    item_id: Item.all.sample.id
     #start_time: Faker::Date.between(from: 15.days.ago, to: Date.today),
     #end_time: Faker::Date.forward(days: 30),
     #confirmed: [true, true, false].sample
