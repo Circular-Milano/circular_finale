@@ -42,7 +42,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user = current_user
     @item.save
-    redirect_to items_path(@item)
+    redirect_to items_path
   end
 
   def edit
@@ -68,7 +68,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :description, :category)
+    params.require(:item).permit(:name, :description, :category, :photo)
   end
 end
 

@@ -13,6 +13,7 @@
     <div class="col-sm-4">
       <div class="card bg-white p-3">
         <h5><%= link_to item.name, item_path(item) %> 
+        <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill if  item.photo.attached? %>
         <p><%= item.description %></p>
         <p><%= item.category %></p>
       </div>

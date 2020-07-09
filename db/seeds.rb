@@ -5,9 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+require "open-uri"
+
 Order.destroy_all
 Item.destroy_all
 User.destroy_all
+
+
+
 
 10.times do |i|
   user = User.create!(
@@ -20,13 +27,17 @@ User.destroy_all
   puts "#{i + 1}. #{user.first_name} #{user.last_name}"
 end
 
+
+
 10.times do
+  file = URI.open('https://source.unsplash.com/800x600/?gear')
   item = Item.create(
     name:  Faker::Device.model_name,
     description: Faker::Quote.yoda,
     user_id: User.all.sample.id,
     category: Faker::Commerce.department
   )
+  item.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   puts item.valid?
 end
 
