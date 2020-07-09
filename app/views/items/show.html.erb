@@ -1,8 +1,8 @@
-<h1><%= @item.name %> <%= '⭐️' * @item.rating %></h1>
+<h1><%= @item.name %>    <%='⭐️' * @item.rating if @item.rating%></p> </h1>
 <p><%= @item.description %></p>
 
 
-
-<%= link_to "Back to Circular Store", items_path %>
-<%= link_to "Edit", edit_item_path(@item) %>
-<%= link_to "Delete", item_path(@item), method: :delete, data: { confirm: "Are you sure? 😱"} %>
+<%= link_to "Book this item", new_item_order_path(@item), class: "btn btn-primary" %>
+<%= link_to "Back to Circular Store", items_path, class: "btn btn-secondary" %>
+<%= link_to "Edit", edit_item_path(@item), class: "btn btn-alert" %>
+<%= link_to "Delete", item_path(@item), method: :delete, data: { confirm: "Are you sure? 😱"}, class: "btn btn-danger" %>
