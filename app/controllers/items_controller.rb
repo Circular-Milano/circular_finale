@@ -4,7 +4,14 @@ class ItemsController < ApplicationController
 
 # GET /items
    def index
-    @items = Item.all
+    def index
+      if params[:query].present?
+        sql_query = "name ILIKE :query OR description ILIKE :query"
+        @items = Item.where(sql_query, query: "%#{params[:query]}%")
+      else
+        @items = Item.all
+      end
+    end
    end
 
 # GET /items/:id
