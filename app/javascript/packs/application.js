@@ -7,12 +7,17 @@ require("@rails/activestorage").start()
 require("channels")
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { loadDynamicBannerText } from '../components/banner';
+
 import { initMapbox } from '../plugins/init_mapbox';
 import 'bootstrap';
 
 initMapbox();
 
 initUpdateNavbarOnScroll();
+
+loadDynamicBannerText();
+
 
 
 
