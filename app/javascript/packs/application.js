@@ -2,23 +2,18 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
-
-import { initUpdateNavbarOnScroll } from '../components/navbar';
-import { loadDynamicBannerText } from '../components/banner';
-
-
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { initMapbox } from '../plugins/init_mapbox';
 import 'bootstrap';
 
-document.addEventListener('turbolinks:load', () => {
-  // Call your JS functions here
-  initUpdateNavbarOnScroll();
-  loadDynamicBannerText();
-});
+initMapbox();
+
+initUpdateNavbarOnScroll();
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
