@@ -3,7 +3,7 @@
     <h1 id="home-header"><strong>Circular</strong></h1>
     <span id="banner-typed-text"></span>
     <title>Search Bar</title>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row row-no-gutters">
         <div class="col-sm-11">
           <%= form_tag items_path, method: :get do %>
@@ -19,29 +19,68 @@
       </div>
     </div>
   </div>
-  <div class="scroll-down-button scrollable">
-  <a href="#section02"><span></span>Scroll</a>
+  <div class="scroll-down-button-white scrollable">
+  <a href="#section02"><span></span></a>
   </div>
 </section>
 
-<section id="section02" class="section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-push-2 col-md-push-2 col-sm-push-2">
+<section id="section02" class="section container-fluid">
+  <div class="row section02-container">
+
+    <div class="col-sm-12 col-md-12 col-lg-12 desc-items">
+      <div class="home-description">
         <h1>How does it work?</h1>
-        <div>
-          <p id="home-description">
-            <b>Circular</b> is a peer-to-peer rental marketplace. We empower our members to embrace the sharing economy and avoid making unnecessary purchases. Anyone can post their items on Circular for people in their community to rent.
-          </p>
-        </div>
         <p>
-          Do you want to share your things with the world? Renting items with Circular is easy, safe and fast, so you can borrow items you need and lend items you don’t.
+          Have something you want to share with the world? Renting with CIRCULAR is easy, flexible, secured and fast so borrow items you need and lend items you don’t.
         </p>
       </div>
     </div>
+
+    <%# <div class="container-fluid"> %>
+      <div class="col-sm-3 col-md-3 col-lg-3 how-to-container">
+        <div class="icon-container">
+          <%= image_tag("icons/find.svg") %>
+        </div>
+        <h2>FIND</h2>
+        <p>
+          Browse through tons of items for rent.
+        </p>
+      </div>
+
+      <div class="col-sm-3 col-md-3 col-lg-3 how-to-container">
+        <div class="icon-container">
+          <%= image_tag("icons/book.svg") %>
+        </div>
+        <h2>BOOK</h2>
+        <p>
+          Schedule rental for as long as you need.
+        </p>
+      </div>
+
+      <div class="col-sm-3 col-md-3 col-lg-3 how-to-container">
+        <div class="icon-container">
+          <%= image_tag("icons/use.svg") %>
+        </div>
+        <h2>USE</h2>
+        <p>
+          Enjoy your rental as you please.
+        </p>
+      </div>
+
+      <div class="col-sm-3 col-md-3 col-lg-3 how-to-container">
+        <div class="icon-container">
+          <%= image_tag("icons/return.svg") %>
+        </div>
+        <h2>RETURN</h2>
+        <p>
+          Return item in its original condition.
+        </p>
+      </div>
+    <%# </div> %>
+
   </div>
-  <div class="scroll-down-button scrollable">
-  <a href="#section03"><span></span>Scroll</a>
+  <div class="scroll-down-button-black scrollable">
+  <a href="#section03"><span></span></a>
   </div>
 </section>
 

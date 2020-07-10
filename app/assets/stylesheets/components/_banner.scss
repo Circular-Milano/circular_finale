@@ -6,3 +6,41 @@
   text-align: center;
   padding-top: 40vh;
 }
+
+.icon-container {
+  max-width: 112px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.section02-container {
+  margin: 10px 10px 10px 10px !important;
+  padding-top: 100px;
+}
+
+.home-description {
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 100%;
+
+}
+.home-description p, h1, h2 {
+  text-align: center;
+  padding: 24px 24px 24px 24px;
+}
+
+.desc-items {
+  margin: 48px 24px 48px 24px;
+  // max-width: 80%;
+}
+
+.how-to-container {
+  padding: 48px 48px 48px 48px;
+  max-width: 90%;
+}
+
+.how-to-container h2, p {
+  text-align: center;
+}
