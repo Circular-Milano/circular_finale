@@ -1,6 +1,6 @@
 #search {
-    width: 80%;
-    padding: 7px;
+    // width: 80%;
+    // padding: 7px;
     // border-radius: 1px solid #1d8394;
     // border-radius: 5px 5px 5px 5px;
     border-radius: 10px;
@@ -9,14 +9,13 @@
 #submit{
     // border-radius: 0px 5px 5px 0px;
     border-radius: 10px;
-    padding: 8px;
     background: #5A92FE;
     // border: 1px solid #4B88FE;
     color: white;
-    margin-left: -10px;
+    // margin-left: -10px;
     // cursor: pointer;
-    width: 85px;
-    text-align: center
+    // width: 85px;
+    text-align: center;
 }
 
 #submit:hover {
@@ -24,3 +23,14 @@
     transition: all 0,30s;
     border: #4B88FE;
 };
+
+.form-control {
+    border-radius: 10px;
+    // width: 80%;
+}
+
+.search-btn-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: -90px;
+}

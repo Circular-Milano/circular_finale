@@ -1,49 +1,30 @@
-<section id="section01" class="scrollable section">
+<section id="section01" class="section">
   <div class="home-banner">
     <h1 id="home-header"><strong>Circular</strong></h1>
     <span id="banner-typed-text"></span>
     <title>Search Bar</title>
     <div class="container">
-      <%# <div class="row"> %>
-        <%# <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-push-2 col-md-push-2 col-sm-push-2"> %>
-          <form method="post" action="#" style="padding-top: 100px;">
-            <input type="text" name="text" id="search" placeholder="What do you need to borrow?">
-            <input type="submit" name="submit" value="Search" id="submit">
-          </form>
-        <%# </div> %>
-      <%# </div> %>
+      <div class="row row-no-gutters">
+        <div class="col-sm-11">
+          <%= form_tag items_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "what do you want to borrow today?" %>
+        </div>
+        <div class="col-sm-1 search-btn-container">
+          <%= submit_tag "Search", class: "btn btn-primary", id: "submit" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="scroll-down-button">
+  <div class="scroll-down-button scrollable">
   <a href="#section02"><span></span>Scroll</a>
   </div>
 </section>
 
-<section id="section02" class="scrollable section">
-  <div id="green" class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')">
-    <div class="section-content">
-      <!-- contenuto di esempio START -->
-      <div>
-          <h4>The sharing economy</h4>
-
-          <p>Think about it....You open your storage closet and see your massive backpack that you used on your last Eurail trip. The climbing shoes from when you took some bouldering classes. Your extra speakers. 
-          </p><br>
-
-          <p>We all have too much stuff. But what can you do to avoid accumulating more? Communities have shared their things for thousands of years, but now, it is easier than ever.
-          </p><br>
-
-          <p>Stats about the sharing economy here
-          </p><br>
-      </div>
-      <!-- contenuto di esempio END -->
-    </div>
-  </div>
-  <div class="scroll-down-button">
-  <a href="#section03"><span></span>Scroll</a>
-  </div>
-</section>
-
-<section id="section03" class="scrollable section">
+<section id="section02" class="section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-push-2 col-md-push-2 col-sm-push-2">
@@ -59,12 +40,12 @@
       </div>
     </div>
   </div>
-  <div class="scroll-down-button">
-  <a href="#section04"><span></span>Scroll</a>
+  <div class="scroll-down-button scrollable">
+  <a href="#section03"><span></span>Scroll</a>
   </div>
 </section>
 
-<section id="section04" class="scrollable section">
+<section id="section03" class="section">
   <div id="carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carousel" data-slide-to="0" class="active"></li>
