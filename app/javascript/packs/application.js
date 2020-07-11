@@ -7,7 +7,8 @@ require("@rails/activestorage").start()
 require("channels")
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
-import { loadDynamicBannerText } from '../components/banner';
+import "../plugins/flatpickr"
+
 
 import { initMapbox } from '../plugins/init_mapbox';
 import 'bootstrap';
@@ -16,16 +17,23 @@ initMapbox();
 
 initUpdateNavbarOnScroll();
 
-loadDynamicBannerText();
 
+const cat = () => {
+    console.log("ciao")
+    const items = document.querySelectorAll(".item")
+    const btn = document.querySelectorAll(".btn-category")
+    btn.forEach((button) => {
+        console.log("ciao")
+        button.addEventListener("click", event => {
+        items.forEach((item) => {
+            if ( event.currentTarget.value === "All" || item.dataset.category === event.currentTarget.value ) {
+                item.style.display = "block"
+            } else {
+                item.style.display = "none"
+            }
+        })
+        })
+    })
+}
 
-
-
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
-
-
+cat();
