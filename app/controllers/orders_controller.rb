@@ -58,7 +58,7 @@ class OrdersController < ApplicationController
     @order.user = current_user
     @order.item_id = params[:item_id]
     @order.save
-    redirect_to items_path(@item)
+    redirect_to items_path
   end
 
  # def update
@@ -82,7 +82,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:item, :user)
+    params.require(:order).permit(:item, :user, :start_time, :end_time, :message)
   end
 end
 

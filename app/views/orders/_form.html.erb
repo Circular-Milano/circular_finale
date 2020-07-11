@@ -1,6 +1,15 @@
-<%= simple_form_for @order do |f| %>
-  <%= f.input :message %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+
+<%= simple_form_for order, url: item_orders_path(@item) do |f| %>
+  <div class="form-input-short">
+    <%= f.input :start_time, as: :string, input_html: { id: "start_time" }, placeholder: "#{Date.today.strftime("%B %d, %Y")}", label: false %>
+  </div>
+  <div class="form-input-short">
+    <%= f.input :end_time, as: :string, input_html: { id: "end_time" }, placeholder: "#{Date.tomorrow.strftime("%B %d, %Y")}", label: false %>
+  </div>
+  <div class="form-input-short">
+  <%= f.input :message, as: :string, input_html: { id: "message" }, placeholder: "Write here your message to the owner", label: false %>
+</div>
+  <div>
+    <%= f.button :submit, value: "Request to book", class:"btn btn-primary" %>
+  </div>
 <% end %>
-
-

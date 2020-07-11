@@ -1,0 +1,17 @@
+<div class="mt-5">
+  <% current_user.orders.each do |order| %>
+    <div class="card bg-white p-3">
+      <h5><%= order.item.name %></h5>
+      <h5><%= order.item.description %></h5>
+      <h5><%= order.start_time %></h5>
+      <h5><%= order.end_time %></h5>
+    </div>
+  <% end %>
+</div>
+
+<div class="mt-5">
+  <% current_user.items.each do |item| %>
+    <h5><%= item.name %></h5>
+    <h5><%= item.description %></h5>
+  <% end %>
+</div>
