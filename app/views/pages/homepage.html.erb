@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="home-banner">
   <h1 id="home-header"><strong>"I DON'T WANT OBJECTS, I WANT THE PLEASURE THAT COMES WITH IT"</strong></h1>
   <p>
@@ -45,160 +46,163 @@
         %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
+=======
 
-      </div>
-    </div>
-  </div>
-
-  </nav>
-
-  </p>
-</div>
-
-
-
-
-<div id="green" class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')">
-  <div class="section-content">
-    <!-- contenuto di esempio START -->
-    <div class="container white-color">
-
-      <div class="row">
-        <div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">
-          <h4>The sharing economy</h4>
+<section id="section01" class="section">
+  <div class="home-banner">
+    <h1 id="home-header"><strong>Circular</strong></h1>
+    <span id="banner-typed-text"></span>
+    <title>Search Bar</title>
+    <div class="container-fluid">
+      <div class="row row-no-gutters">
+        <div class="col-sm-11">
+          <%= form_tag items_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "what do you want to borrow today?" %>
         </div>
-      </div>
+        <div class="col-sm-1 search-btn-container">
+          <%= submit_tag "Search", class: "btn btn-primary", id: "submit" %>
+          <% end %>
+        </div>
+>>>>>>> 1eb61763bb5dc8c463b5bfb60d94815f6b95ef03
 
-
-
-      <div class="row">
-        <div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Think about it....You open your storage closet and see your massive backpack that you used on your last Eurail trip. The climbing shoes from when you took some bouldering classes. Your extra speakers. </div>
-
-        <div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">We all have too much stuff. But what can you do to avoid accumulating more? Communities have shared their things for thousands of years, but now, it is easier than ever.</div>
-
-        <div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Stats about the sharing economy here</div>
       </div>
     </div>
-    <!-- contenuto di esempio END -->
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-push-2 col-md-push-2 col-sm-push-2">
-      <h1>How does it work?</h1>
-      <hr>
- <div>
-  <p id="home-description">
-    <b>Circular</b> is a peer-to-peer rental marketplace. We empower our members to embrace the sharing economy and avoid making unnecessary purchases. Anyone can post their items on Circular for people in their community to rent.
-  </p>
-</div>
-      <p>
-        Do you want to share your things with the world? Renting items with Circular is easy, safe and fast, so you can borrow items you need and lend items you don’t.
-      </p>
-      <hr>
-    </div>
+  <div class="scroll-down-button-white scrollable">
+  <a href="#section02"><span></span></a>
   </div>
-</div>
+</section>
 
-<div id="carousel" class="carousel slide" data-ride="carousel">
+<section id="section02" class="section container-fluid">
+  <div class="row section02-container">
 
-  <ol class="carousel-indicators">
-    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
-    <li data-target="#carousel" data-slide-to="3"></li>
-    <li data-target="#carousel" data-slide-to="4"></li>
-    <li data-target="#carousel" data-slide-to="5"></li>
-    <li data-target="#carousel" data-slide-to="6"></li>
-    <li data-target="#carousel" data-slide-to="7"></li>
-  </ol>
+    <div class="col-sm-12 col-md-12 col-lg-12 desc-items">
+      <div class="home-description">
+        <h1>How does it work?</h1>
+        <p>
+          Have something you want to share with the world? Renting with CIRCULAR is easy, flexible, secured and fast so borrow items you need and lend items you don’t.
+        </p>
+      </div>
+    </div>
 
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="background-image: url(https://images.unsplash.com/photo-1516946870798-f970a32afc8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
-    </div>
-    <div class="carousel-caption d-none d-md-block animated fadeInUp">
-        <h5> Discover Circular </h5>
-    </div>
-    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1577583123610-238683cc3f9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);">
-    </div>
-    <div class="carousel-caption d-none d-md-block animated fadeInUp">
-        <h5> Discover Circular </h5>
-    </div>
-    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1576269075902-eeadd51fb4cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
-    </div>
-    <div class="carousel-caption d-none d-md-block animated fadeInUp">
-        <h5> Discover Circular </h5>
-    </div>
-    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1543804491-66d81260fe90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
-    </div>
-    <div class="carousel-caption d-none d-md-block animated fadeInUp">
-        <h5> Discover Circular </h5>
-    </div>
-    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1530028828-25e8270793c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
-    </div>
-    <div class="carousel-caption d-none d-md-block animated fadeInUp">
-        <h5> Discover Circular </h5>
-    </div>
-    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1516382686263-779707ed2896?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
-    </div>
-    <div class="carousel-caption d-none d-md-block animated fadeInUp">
-        <h5> Discover Circular </h5>
-    </div>
-    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1503071866712-4af2112f609b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);">
-    </div>
-    <div class="carousel-caption d-none d-md-block animated fadeInUp">
-        <h5> Discover Circular </h5>
-    </div>
-    <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1585298966493-a2fd75666f5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80);">
-    </div>
-    <div class="carousel-caption d-none d-md-block animated fadeInUp">
-        <h5> Discover Circular </h5>
-    </div>
+    <%# <div class="container-fluid"> %>
+      <div class="col-sm-3 col-md-3 col-lg-3 how-to-container">
+        <div class="icon-container">
+          <%= image_tag("icons/find.svg") %>
+        </div>
+        <h2>FIND</h2>
+        <p>
+          Browse through tons of items for rent.
+        </p>
+      </div>
+
+      <div class="col-sm-3 col-md-3 col-lg-3 how-to-container">
+        <div class="icon-container">
+          <%= image_tag("icons/book.svg") %>
+        </div>
+        <h2>BOOK</h2>
+        <p>
+          Schedule rental for as long as you need.
+        </p>
+      </div>
+
+      <div class="col-sm-3 col-md-3 col-lg-3 how-to-container">
+        <div class="icon-container">
+          <%= image_tag("icons/use.svg") %>
+        </div>
+        <h2>USE</h2>
+        <p>
+          Enjoy your rental as you please.
+        </p>
+      </div>
+
+      <div class="col-sm-3 col-md-3 col-lg-3 how-to-container">
+        <div class="icon-container">
+          <%= image_tag("icons/return.svg") %>
+        </div>
+        <h2>RETURN</h2>
+        <p>
+          Return item in its original condition.
+        </p>
+      </div>
+    <%# </div> %>
+
   </div>
-
-  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-
-
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <%= "Facts about Circular " * 5 %>
-    </div>
+  <div class="scroll-down-button-black scrollable">
+  <a href="#section03"><span></span></a>
   </div>
-</div>
+</section>
+
+<section id="section03" class="section">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+      <li data-target="#carousel" data-slide-to="3"></li>
+      <li data-target="#carousel" data-slide-to="4"></li>
+      <li data-target="#carousel" data-slide-to="5"></li>
+      <li data-target="#carousel" data-slide-to="6"></li>
+      <li data-target="#carousel" data-slide-to="7"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url(https://images.unsplash.com/photo-1516946870798-f970a32afc8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+      </div>
+      <div class="carousel-caption d-none d-md-block animated fadeInUp">
+          <h5> Discover Circular </h5>
+      </div>
+      <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1577583123610-238683cc3f9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);">
+      </div>
+      <div class="carousel-caption d-none d-md-block animated fadeInUp">
+          <h5> Discover Circular </h5>
+      </div>
+      <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1576269075902-eeadd51fb4cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+      </div>
+      <div class="carousel-caption d-none d-md-block animated fadeInUp">
+          <h5> Discover Circular </h5>
+      </div>
+      <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1543804491-66d81260fe90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+      </div>
+      <div class="carousel-caption d-none d-md-block animated fadeInUp">
+          <h5> Discover Circular </h5>
+      </div>
+      <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1530028828-25e8270793c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+      </div>
+      <div class="carousel-caption d-none d-md-block animated fadeInUp">
+          <h5> Discover Circular </h5>
+      </div>
+      <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1516382686263-779707ed2896?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+      </div>
+      <div class="carousel-caption d-none d-md-block animated fadeInUp">
+          <h5> Discover Circular </h5>
+      </div>
+      <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1503071866712-4af2112f609b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);">
+      </div>
+      <div class="carousel-caption d-none d-md-block animated fadeInUp">
+          <h5> Discover Circular </h5>
+      </div>
+      <div class="carousel-item" style="background-image: url(https://images.unsplash.com/photo-1585298966493-a2fd75666f5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80);">
+      </div>
+      <div class="carousel-caption d-none d-md-block animated fadeInUp">
+          <h5> Discover Circular </h5>
+      </div>
+    </div>
 
 
-
-
-
-
-
-
-
-
-
-
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
 
 <%= link_to "About Us", about_path %>
 <%= link_to "Circular Store", items_path %>
