@@ -12,13 +12,16 @@
   </head>
 
   <body>
-    <body>
-
+    <body data-spy="scroll" data-target="#navbar-example">
+    <% if current_page?(home_path) %>
     <%= render "shared/navbar" %>
-    <%= yield %>
+    <% else %>
+    <%= render "shared/navbar_dark" %>
+    <% end %>
+    <%= yield %>    
     <%= render "shared/footer" %>
 
-  </body data-spy="scroll" data-target="#navbar-example">
+  </body>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_pack_tag 'application' %>
 </html>

@@ -42,7 +42,17 @@
   color: white !important;
 }
 
+// dark navbar for all views except home
+.navbar-lewagon-dark {
+  background: #2F303A;
+  justify-content: space-between;
+  transition: .5s;
+}
 
-#green {
-color: white;
+.navbar-lewagon-dark .navbar-brand img {
+  width: 150px;
+}
+
+.navbar-lewagon-dark .navbar-collapse {
+  flex-grow: 0;
 }
