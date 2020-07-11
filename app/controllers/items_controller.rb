@@ -3,15 +3,19 @@ class ItemsController < ApplicationController
 
 
 # GET /items
-   def index
     def index
       if params[:query].present?
         sql_query = "name ILIKE :query OR description ILIKE :query"
-        @items = Item.where(sql_query, query: "%#{params[:query]}%")
+        @items = Item.where(sql_query, query: "%#{params[:query]}%").geocoded
       else
-        @items = Item.all
+        @items = Item.geocoded
       end
-    end
+      @markers = @items.map do |item|
+        {
+          lat: item.latitude,
+          lng: item.longitude
+        }
+      end
    end
 
 # GET /items/:id
@@ -68,9 +72,8 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :description, :category, :photo)
+    params.require(:item).permit(:name, :description, :category, :photo, :location)
   end
 end
 
 
-# saranno da mettere dentro nel permit :rating :start_time, :end_time, :price, :photo

@@ -1,3 +1,20 @@
+.nav-item-circular > a {
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+.nav-item-circular:hover > a:hover {
+    color: white !important;
+    background-color: #5A92FE;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
@@ -16,12 +33,16 @@
   width: 150px;
 }
 
+
 #home-header {
   font-size: 50px;
+}
+
+.nav-link {
+  color: white !important;
 }
 
 
 #green {
 color: white;
 }
-

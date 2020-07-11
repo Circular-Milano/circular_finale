@@ -5,19 +5,47 @@
     <div class="row">
     </div>
 </div>
+[  "baby", "sport & outdoors", "electronics", "books", "videogrames", "toys", "luggage", "men’s fashion", "women’s fashion", "pet supplies" ]
+<div class="categories mt-5">
+  <button type="button" class="btn btn-outline-primary btn-category" value="All">All</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Baby">Baby</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Sport & outdoors">Sport & outdoors</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Electronics">Electronics</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Books">Books</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Videogrames">Videogrames</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Toys">Toys</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Luggage">Luggage</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Men’s fashiony">Men’s fashiony</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Women’s fashion">Women’s fashion</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Pet supplies">Pet supplies</button>
+
+</div>
 
 
-  <div class="container" id="space">
-    <div class="row">
-    <% @items.each do |item| %>
-    <div class="col-sm-4">
-      <div class="card bg-white p-3">
-        <h5><%= link_to item.name, item_path(item) %> 
-        <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill if  item.photo.attached? %>
-        <p><%= item.description %></p>
-        <p><%= item.category %></p>
+  <div class="mt-5">
+    <div class="d-flex justify-content-between">
+        <div class="row w-50">
+          <% @items.each do |item| %>
+            <div class="col-sm-6 item" data-category="<%= item.category %>">
+              <div class="card bg-white p-3">
+                <h5><%= link_to item.name, item_path(item) %> 
+                <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill if  item.photo.attached? %>
+                <div>
+                  <p><%= item.description %></p>
+                  <p><%= item.category %></p>
+                </div>
+
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+
+
+      <div id="map"
+          style="width: 50%; height: 100vh;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
-    <% end %>
   </div>
-</div>
