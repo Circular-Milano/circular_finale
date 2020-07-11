@@ -1,6 +1,28 @@
 <%= render "shared/navbar" %>
 
 
+<div class="sidebar-wrapper">
+  <div class="sidebar-linklist-wrapper">
+    <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li>
+          <h3 class="no_toc">CATEGORY</h3>
+        </li>
+        <li><a class="list-item medium active" href="#"><span>Baby</span></a>
+        </li>
+        <li><a class="list-item medium disabled" href="#"><span>Electronics</span></a>
+        </li>
+        <li><a class="list-item medium" href="#"><span>Music</span></a>
+        </li>
+        <li><a class="list-item medium" href="#"><span>Sports & Outdoors</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
 <div id="header">
     <div class="row">
     </div>
@@ -12,7 +34,7 @@
     <% @items.each do |item| %>
     <div class="col-sm-4">
       <div class="card bg-white p-3">
-        <h5><%= link_to item.name, item_path(item) %> 
+        <h5><%= link_to item.name, item_path(item) %>
         <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill if  item.photo.attached? %>
         <p><%= item.description %></p>
         <p><%= item.category %></p>
