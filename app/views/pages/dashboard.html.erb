@@ -5,6 +5,7 @@
       <h5><%= order.item.description %></h5>
       <h5><%= order.start_time %></h5>
       <h5><%= order.end_time %></h5>
+      <%= link_to "add a review", new_order_review_path(order) %>
     </div>
   <% end %>
 </div>

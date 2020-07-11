@@ -3,7 +3,6 @@ class ItemsController < ApplicationController
 
 
 # GET /items
-   def index
     def index
       if params[:query].present?
         sql_query = "name ILIKE :query OR description ILIKE :query"
@@ -17,7 +16,6 @@ class ItemsController < ApplicationController
           lng: item.longitude
         }
       end
-    end
    end
 
 # GET /items/:id

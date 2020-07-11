@@ -10,10 +10,14 @@ Rails.application.routes.draw do
 
 
   resources :items do
-    resources :orders do
+    resources :orders do 
     end
   end
 
+  resources :orders do
+    resources :reviews do
+    end
+  end
 
   #resources :reviews, only: [:destroy]
 

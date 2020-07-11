@@ -35,7 +35,7 @@ end
     name:  Faker::Device.model_name,
     description: Faker::Quote.yoda,
     user_id: User.all.sample.id,
-    category: Faker::Commerce.department,
+    category: [ "Baby", "Sport & outdoors", "Electronics", "Books", "Videogrames", "Toys", "Luggage", "Men’s fashion", "Women’s fashion", "Pet supplies" ].sample,
     location: ["turin", "milan", "florence", "venice", "rome"].sample
   )
   item.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
