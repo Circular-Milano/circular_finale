@@ -3,6 +3,22 @@
   <%= f.input :description %>
   <%= f.input :category %>
   <%= f.input :location %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
+  <label class="btn btn-primary circular-button">
+    Add a photo
+    <span style="display:none;">
+    <%= f.input :photo, as: :file %>
+    </span>
+  </label>
+  <label class="btn btn-primary circular-button">
+  Create Item
+  <span style="display:none;">
+    <%= f.submit %>
+  </span>
+</label>
 <% end %>
+<%# ----below how to add a class to a field %>
+<%# <%= f.input :photo, input_html: { class: 'photo-field' }, as: :file %>
+
+<%# -----below the original simple_form fields with default buttons %>
+<%# <%= f.input :photo, as: :file %>
+  <%# <%= f.submit %>

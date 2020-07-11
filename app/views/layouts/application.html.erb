@@ -14,8 +14,11 @@
 
   <body>
     <body>
-
+    <% if current_page?(home_path) %>
     <%= render "shared/navbar" %>
+    <% else %>
+    <%= render "shared/navbar_dark" %>
+    <% end %>
     <%= yield %>    
     <%= render "shared/footer" %>
 
