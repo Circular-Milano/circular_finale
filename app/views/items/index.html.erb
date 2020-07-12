@@ -23,14 +23,14 @@
 
 
   <div class="mt-5">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between" style="margin-bottom: 40px; margin-left: 20px;">
         <div class="row w-50">
           <% @items.each do |item| %>
             <div class="col-sm-6 item" data-category="<%= item.category %>">
-              <div class="card bg-white p-3">
-                <h5><%= link_to item.name, item_path(item) %> 
-                <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill if  item.photo.attached? %>
-                <div>
+              <div class="card-product bg-white p-3" id="padre">
+                <h5><%= link_to item.name, item_path(item) %>
+                <%= cl_image_tag item.photo.key, height: 100, width: 100, crop: :fill if  item.photo.attached? %>
+                <div class="card-product-infos">
                   <p><%= item.description %></p>
                   <p><%= item.category %></p>
                 </div>
@@ -42,8 +42,10 @@
 
 
 
+
+
       <div id="map"
-          style="width: 50%; height: 100vh;"
+          style="width: 50%; height: 100vh; margin-top: 15px; margin-right: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.2);"
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
