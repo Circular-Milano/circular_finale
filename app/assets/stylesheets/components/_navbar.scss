@@ -1,18 +1,11 @@
-.nav-item-circular > a {
+.navbar-lewagon  .nav-item-circular .nav-link {
+  color: rgba( 255, 255, 255, 0.6);
+  border-bottom: 1px solid transparent;
+  transition: .3s;
+}
+.navbar-lewagon .nav-item-circular .nav-link:hover {
   color: white;
-  background-color: transparent;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-}
-.nav-item-circular:hover > a:hover {
-    color: white !important;
-    background-color: #5A92FE;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: white;
+  border-bottom: 1px solid white;
 }
 
 .navbar-lewagon {
@@ -36,10 +29,6 @@
 
 #home-header {
   font-size: 50px;
-}
-
-.nav-link {
-  color: white !important;
 }
 
 // dark navbar for all views except home

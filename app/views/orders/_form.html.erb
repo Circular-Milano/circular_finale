@@ -1,10 +1,10 @@
 
 <%= simple_form_for order, url: item_orders_path(@item) do |f| %>
   <div class="form-input-short">
-    <%= f.input :start_time, as: :string, input_html: { id: "start_time", class: "datepicker" }, placeholder: "#{Date.today.strftime("%B %d, %Y")}", label: false %>
+    <%= f.input :start_time, as: :string, input_html: { id: "start_time", class: "datepicker", required: true }, placeholder: "Pick a start date", label: false %>
   </div>
   <div class="form-input-short">
-    <%= f.input :end_time, as: :string, input_html: { id: "end_time", class: "datepicker" }, placeholder: "#{Date.tomorrow.strftime("%B %d, %Y")}", label: false %>
+    <%= f.input :end_time, as: :string, input_html: { id: "end_time", class: "datepicker", required: true }, placeholder: "Pick an end date", label: false %>
   </div>
   <div class="form-input-short">
   <%= f.input :message, as: :string, input_html: { id: "message" }, placeholder: "Write here your message to the owner", label: false %>

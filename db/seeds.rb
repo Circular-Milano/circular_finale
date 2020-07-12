@@ -35,6 +35,7 @@ end
     name:  Faker::Device.model_name,
     description: Faker::Quote.yoda,
     user_id: User.all.sample.id,
+    price_cents: 20,
     category: [ "Baby", "Sport & outdoors", "Electronics", "Books", "Videogrames", "Toys", "Luggage", "Men’s fashion", "Women’s fashion", "Pet supplies" ].sample,
     location: ["turin", "milan", "florence", "venice", "rome"].sample
   )
