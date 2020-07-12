@@ -12,13 +12,13 @@
   </head>
 
   <body>
-    <body data-spy="scroll" data-target="#navbar-example">
+    <body data-spy="scroll" data-target="#navbar-example" style="text-align: center">
     <% if current_page?(home_path) %>
     <%= render "shared/navbar" %>
     <% else %>
     <%= render "shared/navbar_dark" %>
     <% end %>
-    <%= yield %>    
+    <%= yield %>
     <%= render "shared/footer" %>
 
   </body>
