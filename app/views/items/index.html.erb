@@ -22,20 +22,19 @@
 </div>
 
 
-  <div class="mt-5">
+  <div class="card-container mx-auto mt-5">
     <div class="d-flex justify-content-between" style="margin-bottom: 40px; margin-left: 20px;">
-        <div class="row w-50">
+        <div class="row no-gutters w-75">
           <% @items.each do |item| %>
             <div class="col-sm-6 item" data-category="<%= item.category %>">
-              <div class="card-product bg-white p-3" id="padre">
-                <h5><%= link_to item.name, item_path(item) %>
+              <div class="card-product bg-white" id="padre">
                 <%= cl_image_tag item.photo.key, height: 100, width: 100, crop: :fill if  item.photo.attached? %>
                 <div class="card-product-infos">
+                  <h4><%= link_to item.name, item_path(item) %></h4>
+                  <p class="item-category"><strong><%= item.category %></strong></p>
                   <p><%= item.description %></p>
-                  <p><%= item.category %></p>
-                  <p>Amount: <%= humanized_money_with_symbol(item.price) %></p>
+                  <p class="price">Price: <strong><%= humanized_money_with_symbol(item.price)%></strong>/day</p>
                 </div>
-
               </div>
             </div>
           <% end %>
