@@ -18,7 +18,9 @@
     <% else %>
     <%= render "shared/navbar_dark" %>
     <% end %>
+    <div class="app-content">
     <%= yield %>
+    </div>
     <%= render "shared/footer" %>
 
   </body>
