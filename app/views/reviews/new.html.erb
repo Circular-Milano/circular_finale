@@ -1,5 +1,14 @@
-<%= simple_form_for [@order, @review] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :rating, collection: 0..5 %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+
+<div class="container mt-4 circular-form circular-form-new-booking">
+  <div class="row">
+    <div class="col-6 m-auto">
+      <div class="flat-form">
+        <%= simple_form_for [@order, @review] do |f| %>
+          <%= f.input :content %>
+          <%= f.input :rating, collection: 0..5 %>
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
