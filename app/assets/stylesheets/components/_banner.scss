@@ -16,8 +16,8 @@
 
 
 .section02-container {
-  margin: 10px 10px 10px 10px !important;
-  padding-top: 100px;
+  margin: 10px 10px 48px 10px !important;
+  // padding-top: 100px;
 }
 
 .home-description {
@@ -33,17 +33,22 @@
 }
 
 .desc-items {
-  margin: 48px 24px 48px 24px;
+  margin: 0px 24px 0px 24px;
   // max-width: 80%;
 }
 
 .how-to-container {
-  padding: 48px 48px 48px 48px;
+  padding: 0px 48px 0px 48px;
   max-width: 90%;
 }
 
 .how-to-container h2, p {
   font-family: "Karla";
+}
+
+.how-to-section {
+  // height: max-content;
+  max-height: 100vh;
 }
 
 #banner-typed-text {
