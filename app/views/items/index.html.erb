@@ -18,6 +18,7 @@
   <button type="button" class="btn btn-outline-primary btn-category" value="Women’s fashion">Women’s fashion</button>
   <button type="button" class="btn btn-outline-primary btn-category" value="Pet supplies">Pet supplies</button>
   <button type="button" class="btn btn-outline-primary btn-category" value="Music">Music</button>
+  <button type="button" class="btn btn-outline-primary btn-category" value="Health">Health</button>
 
 
 </div>
@@ -29,7 +30,7 @@
           <% @items.each do |item| %>
             <div class="col-sm-6 item" data-category="<%= item.category %>">
               <div class="card-product bg-white" id="padre">
-                <%= cl_image_tag item.photo.key, height: 100, width: 100, crop: :fill if  item.photo.attached? %>
+                <%= cl_image_tag item.photo.key if  item.photo.attached? %>
                 <div class="card-product-infos">
                   <h4><%= link_to item.name, item_path(item) %></h4>
                   <p class="item-category"><strong><%= item.category %></strong></p>
