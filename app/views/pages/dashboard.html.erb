@@ -12,6 +12,7 @@
       <%= link_to "add a review", new_order_review_path(order) %>
       <% else  %>
       <p><%= order.review.content %></p>
+      <p><%= '⭐️' * order.review.rating %></p>
       <% end  %>
     </div>
   <% end %>
